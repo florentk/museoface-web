@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Client :  localhost:3306
--- Généré le :  Dim 11 Novembre 2018 à 00:46
--- Version du serveur :  5.7.24-0ubuntu0.18.04.1
--- Version de PHP :  7.2.10-0ubuntu0.18.04.1
+-- Hôte : localhost
+-- Généré le :  sam. 10 nov. 2018 à 23:48
+-- Version du serveur :  5.5.58-38.10-log
+-- Version de PHP :  5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `museoface`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `portrait`
+--
+
+CREATE TABLE `portrait` (
+  `portrait_id` int(11) NOT NULL,
+  `titre` varchar(100) NOT NULL,
+  `descriptif` varchar(1000) NOT NULL,
+  `quete_id` tinyint(4) NOT NULL,
+  `quete_titre` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `portrait`
+--
+
+INSERT INTO `portrait` (`portrait_id`, `titre`, `descriptif`, `quete_id`, `quete_titre`) VALUES
+(8150, 'un portrait', 'le descriptif de protrait', 1, 'profil'),
+(5876, 'un autre portrait', ' bla bla', 2, 'face');
 
 -- --------------------------------------------------------
 
@@ -37,22 +61,7 @@ CREATE TABLE `visiteur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `visiteur`
---
-
-INSERT INTO `visiteur` (`visiteur_id`, `pseudo`, `mail`, `quete_id`, `portrait_id`, `fond_id`, `image_id`) VALUES
-(1, 'florent', 'florent@kaisseR.name', NULL, NULL, NULL, NULL),
-(2, 'florentk', '', NULL, NULL, NULL, NULL),
-(3, 'florentk', 'florent.com@kaisser.fr', NULL, NULL, NULL, NULL),
-(4, 'florentk', 'florent.com@kaisser.fr', NULL, NULL, NULL, NULL),
-(5, 'florentk', 'florent.com@kaisser.fr', 2, NULL, NULL, NULL),
-(6, 'florentk', 'florent.com@kaisser.fr', NULL, NULL, NULL, NULL),
-(7, 'florentk', 'florent.com@kaisser.fr', 1, 8150, '0', NULL),
-(8, 'sarah', 'sara@toto.fr', 2, 5876, 'ZENX', NULL),
-(9, 'hary', 'har@ggg.com', 2, 5876, 'TIMN', NULL);
-
---
--- Index pour les tables exportées
+-- Index pour les tables déchargées
 --
 
 --
@@ -63,14 +72,16 @@ ALTER TABLE `visiteur`
   ADD KEY `visiteur_id` (`visiteur_id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
 -- AUTO_INCREMENT pour la table `visiteur`
 --
 ALTER TABLE `visiteur`
-  MODIFY `visiteur_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `visiteur_id` bigint(20) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

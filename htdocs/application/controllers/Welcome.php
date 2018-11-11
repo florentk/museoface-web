@@ -114,6 +114,16 @@ class Welcome extends CI_Controller {
 	 # $this->VisiteurModel->setQueteId($id,2);
 	}
 	
+	public function get_fond()
+	{
+	
+	  $email=($this->input->get('email'));
+	  $v = $this->VisiteurModel->getVisiteurFromMail($email);
+	  
+	  echo $v->fond_id;
+	
+	}
+	
 	public function send_image()
 	{
 	
@@ -161,6 +171,26 @@ class Welcome extends CI_Controller {
 
 	
 	}	
+	
+	
+	public function gallery()
+	{
+	
+	 $cdir = scandir("uploads"); 
+   foreach ($cdir as $key => $value) 
+   { 
+      if (!in_array($value,array(".","..",".keep"))) 
+      { 
+          $images[] = $value; 
+      } 
+   } 
+   
+   $data['images'] = array_reverse($images);
+   $this->load->view('gallery',$data);
+	
+	}
+	
+	
 	
 	
 }

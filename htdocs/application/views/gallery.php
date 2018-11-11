@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="refresh" content="5" />
-	<title>Choisi ta quête</title>
+	<title>Choisis ta quête</title>
 	<style>
 	body {
 		 margin:100px;

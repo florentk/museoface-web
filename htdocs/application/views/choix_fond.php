@@ -4,13 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Choisi ta quête</title>
-
+	<title>Choisis ton environnement</title>
+  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
 </head>
 <body>
 
 <div id="container">
-	<h1>Choisi ton environnement</h1>
+	<h1>Bravo tu as trouvé ta silhouette !</h1>
+
+  <h1>Maintenant, choisis ton environnement</h1>
 
 	<div id="body">
 

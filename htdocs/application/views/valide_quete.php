@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Choisi ta quête</title>
-
+  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
 </head>
 <body>
 

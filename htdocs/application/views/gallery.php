@@ -17,14 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	
 <?php 
+echo '<div id="photo">';
 $n = 0;
 foreach ($images as $img) {
   $n=$n+1;
   if ($n > 20) break;
-	echo '<div id="photo">';
 	echo '<img src="'.base_url("uploads/".$img).'"></img>';
-	echo "</div>";
 }
+echo "</div>";
 ?>
 	
 

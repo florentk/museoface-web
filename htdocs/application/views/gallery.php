@@ -7,6 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta http-equiv="refresh" content="5" />
 	<title>Choisi ta quête</title>
 	<style>
+	body {
+		 margin:100px;
+		 padding:10px;
+ 	}
 	img {max-width: 90%;height: auto;}
 	</style>
 </head>

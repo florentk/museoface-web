@@ -58,9 +58,18 @@ pour l’accès au serveur base de donnée MySQL.
 
 Si ce n'est pas encore fait, initialiser la base de donnée avec le fichier `museoface.sql`.
 
+-----------
+Code source
+-----------
 
+Les fichiers code source propre à l'application sont situés dans 
+- htdocs/application/models
+- htdocs/application/views
+- htdocs/application/controllers
+
+-----------
 CodeIgniter
-------------
+-----------
 
 Cette application web est basé sur le framework PHP CodeIgniter.
 

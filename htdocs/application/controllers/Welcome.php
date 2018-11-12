@@ -131,7 +131,7 @@ class Welcome extends CI_Controller {
 	  $v = $this->VisiteurModel->getVisiteurFromMail($email);
     
 	  if($v)
-	    $file_id = date('YmdHis', time());  #$v->visiteur_id;
+	    $file_id = '9999'.date('YmdHis', time());  #$v->visiteur_id;
 	  else{
 	    $file_id = 0;
 	    $uploadOk = 0;

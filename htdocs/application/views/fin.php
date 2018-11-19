@@ -13,12 +13,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <p>Ton selfie est automatiquement sauvegardé! Découvre-le en sortant du tableaumaton à ta droite - Bravo ! Il a toute sa place parmi les oeuvres du Palais des Beaux-arts de Lille !</p>
 
+  <small>Ton pseudo : <?php echo "$email" ?></small>
+
+  
+
+  
+  
 	<div id="photo">
-	  <img src="<?php echo base_url($img); ?>"></img>
+	  <img class="img-rounded" src="<?php echo base_url($img); ?>" width="95%" ></img>
 	</div>
 
-  <p>Ton pseudo : <?php echo "$email" ?></p>
-  
   <a href="<?php echo base_url("index.php"); ?>">Recommencer</a>
   
   </form>

@@ -12,10 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 
   <p>Retrouve l'oeuvre correspondant à ta silhouette parmi les oeuvres signalées par un cartel rouge (il n'y en a que 6!) au sein de la galerie intérieure.</p>
-  
-  <p><?php echo $titre ; ?></p>
+
+  <div class="well">  
+  <h3><?php echo $titre ; ?></h3>
 				  
-  <div id = "description">
+
     <?php echo $desc ; ?>
   </div>
 	
@@ -24,10 +25,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <?php echo form_open('welcome/verif_portrait'); ?>
   
 		  <div id=form>
-				  <?php echo form_input('portrait_id', set_value("portrait_id") , 'placeholder="Code" autofocus'); ?>
-		  </div>
 
-    <?php echo form_submit('submit', 'J\'essaye !');?>
+				  
+				  <?php echo form_input('portrait_id', set_value("portrait_id"),  array("autofocus"=>"","placeholder"=>"Code","class"=>"form-control") ); ?><?php echo form_submit('submit', 'J\'essaye !', array("class"=>"btn btn-primary"));?>
+		  </div>
   
   </form>
 

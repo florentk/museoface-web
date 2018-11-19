@@ -1,23 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Choisis ton environnement</title>
-  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
-</head>
-<body>
+?>
+	
+	<h2>Bravo tu as trouvé ta silhouette !</h2>
 
-<div id="container">
-	<h1>Bravo tu as trouvé ta silhouette !</h1>
-
-  <h1>Maintenant, choisis ton environnement</h1>
+  <h2>4. Choisis ton environnement!</h2>
 
 	<div id="body">
+	
+  <p>Avec ou devant quelle peinture souhaiterais-tu poser? Un paysage, une nature morte ou encore une peinture d'histoire? 
+Tu en as 12 au choix dispersées dans les galeries extérieures et elles sont signalées par un cartel vert!</p>
 
-				
-		  
+  <p>Tu as trouvé? Entre le code à 4 lettres présent que le cartel vert de ton oeuvre préférée!	</p>
+
   <?php echo form_open('welcome/valide_fond'); ?>
   
 		  <div id=form>
@@ -30,8 +25,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	</div>
 
-	<p class="footer">Museoface</p>
-</div>
-
-</body>
-</html>

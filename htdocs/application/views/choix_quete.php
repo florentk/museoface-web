@@ -1,16 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Choisis ta quête</title>
-  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
-</head>
-<body>
+?>
 
-<div id="container">
-	<h1>Choisis ta quête</h1>
+  <h2>2. Choisis ta silhouette !</h2>  
+
+  <p>Chaque silhouette est celle d'un personnage du musée! Il y en a neuf au choix et elles sont signalées par un cartel rouge! Et inutile de courrir dans tout le musée, tu les trouveras uniquement en galerie intérieure!</p>
 
 	<div id="body">
 
@@ -28,9 +22,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  </div>
 
 	</div>
-
-	<p class="footer">Museoface</p>
-</div>
-
-</body>
-</html>

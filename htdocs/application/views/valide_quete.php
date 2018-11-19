@@ -1,28 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Choisi ta quête</title>
-  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
-</head>
-<body>
-
-<div id="container">
-	<h1><?php echo $titre ; ?></h1>
+?>
 	
 	<?php 
 	if($recommence)
 	  echo "<h2>C'est le mauvais portrait, recommence !</h2>"
   ?>
 
+  <h2>3. Commence ta quête !</h2> 
+
 	<div id="body">
 
+  <p>Retrouve l'oeuvre correspondant à ta silhouette parmi les oeuvres signalées par un cartel rouge (il n'y en a que 6!) au sein de la galerie intérieure.</p>
+  
+  <p><?php echo $titre ; ?></p>
 				  
-		  <div id = "description">
-        <?php echo $desc ; ?>
-		  </div>
+  <div id = "description">
+    <?php echo $desc ; ?>
+  </div>
+	
+	<p>Entre le code à 4 chiffres présent sur le cartel rouge pour valider ta réponse! </p>
 		  
   <?php echo form_open('welcome/verif_portrait'); ?>
   
@@ -35,9 +32,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </form>
 
 	</div>
-
-	<p class="footer">Museoface</p>
-</div>
-
-</body>
-</html>

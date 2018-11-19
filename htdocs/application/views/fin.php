@@ -1,27 +1,23 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Choisi ta quête</title>
-	<style>
-	img {max-width: 90%;height: auto;}
-	</style>
-</head>
-<body>
+?>
 
-<div id="container">
-	<h1>Bravo ! Tu peux créer ton portrait !</h1>
-	
+	<div id="body">
+
+  <p>Tu es prêt pour ton selfie ! Dirige-toi vers le tableaumaton en galerie "Symbolisme et Peintures de Salon" !<p>
+    
+  <h2>6. Entre ton pseudo sur l'ordinateur mis à ta disposition... </h2>
+
+  <p>... Saisis-toi de tes accessoires</p> 
+  <p>... Et prend la pose devant ton oeuvre préférée!</p> 
+
+  <p>Ton selfie est automatiquement sauvegardé! Découvre-le en sortant du tableaumaton à ta droite - Bravo ! Il a toute sa place parmi les oeuvres du Palais des Beaux-arts de Lille !</p>
+
 	<div id="photo">
 	  <img src="<?php echo base_url($img); ?>"></img>
 	</div>
 
-	<div id="body">
-
-  <div>Ton pseudo : <?php echo "$email" ?></div>
-  <div>Ton environnement : <?php echo "$fond_id" ?></div>
+  <p>Ton pseudo : <?php echo "$email" ?></p>
   
   <a href="<?php echo base_url("index.php"); ?>">Recommencer</a>
   
@@ -29,8 +25,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	</div>
 
-	<p class="footer">Museoface</p>
-</div>
 
-</body>
-</html>

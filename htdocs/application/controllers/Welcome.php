@@ -18,14 +18,16 @@ class Welcome extends CI_Controller {
 
 	public function enregistrement()
 	{
+	  $this->load->view('header');
 		$this->load->view('enregistrement');
-		
+	  $this->load->view('footer');
 	}
 	
 	public function choix_quete()
 	{
+	  $this->load->view('header');
 		$this->load->view('choix_quete');
-		
+	  $this->load->view('footer');		
 	}
 	
 	public function quete()
@@ -60,7 +62,9 @@ class Welcome extends CI_Controller {
 			$login_id = $this->session->userdata("visiteur_id");
 	    $v = $this->VisiteurModel->getVisiteur($login_id);
 	    if($v->portrait_id){
+	      $this->load->view('header');
 	      $this->load->view('choix_fond');
+    	  $this->load->view('footer');	      
 	    }else
 	      valide_portrait($recommence=1);
 	}
@@ -78,7 +82,9 @@ class Welcome extends CI_Controller {
 		  $data['fond_id'] = $fond_id;
 		  $data['email'] = $v->mail;
 		  $data['img'] = $file_name;
+		  $this->load->view('header');
 	    $this->load->view('fin',$data);
+	    $this->load->view('footer');  
 	  }else
 	    $this->choix_fond();
 	  
@@ -93,8 +99,9 @@ class Welcome extends CI_Controller {
 	  $data['titre'] = $p->titre;
 	  $data['desc'] = $p->descriptif;
 	  $data['recommence'] = $recomence;
-	  
+	  $this->load->view('header');
 	  $this->load->view('valide_quete',$data);
+	  $this->load->view('footer');	  
 	}
 	
 	public function ajout_visiteur()

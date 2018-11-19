@@ -1,24 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Enregistrement</title>
-  <link rel="stylesheet" href="<?php echo base_url("css/styles.css"); ?>">
-</head>
-<body>
-
-<div id="container">
-	<h1>Enregistrement</h1>
+?>
 
 	<div id="body">
+	
+	<p>Bienvenue sur Muséoface !</p>
+	
+	<p>Réalise ton selfie à partir des oeuvres du Palais des Beaux-arts de Lille !</p>
+	
+	<p>A chaque étape, tu vas construire ton autoportrait - tu peux revenir en arrière au besoin. A la fin retrouve notre tableaumaton et entre dans les collections du musée </p>
+	
+	<h2>1. Entre ton pseudo</h2>
+	<p>il te permettra de retrouver les oeuvres choisies au fil de ta visite! 	</p>
 	
   <?php echo form_open('welcome/ajout_visiteur'); ?>
       <?php 
 			  echo form_hidden('pseudo', 'pseudo');
 			?>
-
 				  
 		  <div id=form>
 				  <div>Pseudo : <?php echo form_input('email', set_value("email"), 'placeholder="Pseudo"'); ?></div>

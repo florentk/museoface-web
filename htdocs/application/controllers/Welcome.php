@@ -25,8 +25,9 @@ class Welcome extends CI_Controller {
 	
 	public function choix_quete()
 	{
+	  $data['quetes'] = $this->VisiteurModel->getAllPortraits();
 	  $this->load->view('header');
-		$this->load->view('choix_quete');
+		$this->load->view('choix_quete', $data);
 	  $this->load->view('footer');		
 	}
 	
@@ -98,6 +99,7 @@ class Welcome extends CI_Controller {
 	  $p = $this->VisiteurModel->getPortraitFromQuete($v->quete_id);
 	  $data['titre'] = $p->titre;
 	  $data['desc'] = $p->descriptif;
+	  $data['img'] = $p->quete_img;  
 	  $data['recommence'] = $recomence;
 	  $this->load->view('header');
 	  $this->load->view('valide_quete',$data);

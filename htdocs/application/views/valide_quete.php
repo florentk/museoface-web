@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	<?php 
 	if($recommence)
-	  echo "<h2>C'est le mauvais portrait, recommence !</h2>"
+	  echo '<div class="alert alert-danger">C\'est le mauvais portrait, recommence !</div>'
   ?>
 
   <h2>3. Commence ta quête !</h2> 
@@ -14,9 +14,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <p>Retrouve l'oeuvre correspondant à ta silhouette parmi les oeuvres signalées par un cartel rouge (il n'y en a que 6!) au sein de la galerie intérieure.</p>
 
   <div class="well">  
-  <h3><?php echo $titre ; ?></h3>
-				  
-
+		
+	<div class="thumbnail">
+	    <img src="<?php echo base_url("img/".$img); ?>"></img> 
+  </div>
+   <h3><?php echo $titre ; ?></h3>
     <?php echo $desc ; ?>
   </div>
 	

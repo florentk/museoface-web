@@ -54,6 +54,11 @@ class VisiteurModel extends CI_Model {
    return $query->row();
 	}
 	
+	function getAllPortraits(){
+	 $query = $this->db->get('portrait');
+   return $query->result();
+	}
+	
 	/*
 	function addContact($contact=NULL){		
 		$this->db->insert('lb_contacts', $contact);

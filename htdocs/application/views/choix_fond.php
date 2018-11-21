@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 	
-	<h2>Bravo tu as trouvé ta silhouette !</h2>
+	<div class="alert alert-success">Bravo tu as trouvé ta silhouette !</div>
 
   <h2>4. Choisis ton environnement!</h2>
 
